@@ -58,9 +58,6 @@ pub mod named_spl_mints {
         ctx.accounts.attribution.mint = ctx.accounts.mint.key();
         ctx.accounts.attribution.name = name;
 
-        //is there a reason to force the metadata here, can just let it go wherever? not sure
-        //yeah u can just run the metadata afterwards
-
         Ok(())
     }
 }
@@ -91,6 +88,7 @@ pub struct CreateNewMint<'info> {
 
 //seed = [mintkey]
 //u can go mint -> name
+//should change this to just use the metadata program
 #[account]
 #[derive(Default)]
 pub struct Attribution {

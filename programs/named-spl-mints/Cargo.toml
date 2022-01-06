@@ -1,8 +1,10 @@
 [package]
 name = "named-spl-mints"
-version = "0.1.0"
-description = "Created with Anchor"
+version = "0.1.1"
 edition = "2018"
+description = "program for generating spl token mints with verifiably unique names and name attribution"
+license = "Apache-2.0"
+categories = ["cryptography::cryptocurrencies"]
 
 [lib]
 crate-type = ["cdylib", "lib"]
@@ -10,10 +12,7 @@ name = "named_spl_mints"
 
 [features]
 no-entrypoint = []
-no-idl = []
-no-log-ix-name = []
 cpi = ["no-entrypoint"]
-default = []
 
 [dependencies]
 anchor-lang = "0.19.0"
